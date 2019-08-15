@@ -1,1 +1,327 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+/*variables*/
+/*mixins*/
+/*this helps me figure out the boudaries*/
+/*styling header*/
+header {
+  display: flex;
+  justify-content: space-between;
+  color: dimgrey;
+  background: silver;
+  padding: 2.5%;
+  font-size: 16px;
+  /*close intro div*/
+  /*closes nav*/
+  /*closes myPhoto img*/
+}
+@media screen and (max-width: 500px) {
+  header {
+    height: 45%;
+    font-size: 1rem;
+  }
+}
+header .intro {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  /*closes h1*/
+  /*closes h2*/
+  /*closes p */
+}
+header .intro h1 {
+  font-size: 4rem;
+  height: 30%;
+  /*close media query*/
+}
+@media screen and (max-width: 500px) {
+  header .intro h1 {
+    font-size: 2rem;
+  }
+}
+header .intro h2 {
+  font-size: 3rem;
+  height: 30%;
+  /*closes media query*/
+}
+@media screen and (max-width: 500px) {
+  header .intro h2 {
+    font-size: 1rem;
+  }
+}
+header .intro p {
+  height: 30%;
+}
+@media screen and (max-width: 500px) {
+  header .intro p {
+    font-size: 0.8rem;
+  }
+}
+header nav {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  /*closes media query*/
+}
+@media screen and (max-width: 500px) {
+  header nav {
+    flex-direction: column;
+    align-items: space-around;
+    width: 15%;
+  }
+}
+header nav a {
+  height: 10%;
+  text-align: center;
+  padding-top: 1.5%;
+  width: 50%;
+  border-radius: 20px;
+  border: 1px solid #2F4F4F;
+  color: #2F4F4F;
+  text-decoration: none;
+}
+@media screen and (max-width: 500px) {
+  header nav a {
+    width: 90%;
+  }
+}
+header .myPhoto {
+  padding: 0.75%;
+  width: 20%;
+  /*close media query*/
+}
+@media screen and (max-width: 500px) {
+  header .myPhoto {
+    width: 40%;
+  }
+}
+/*close header*/
+/*styling skillsEducation section*/
+.skillsEducation {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid black;
+  height: 30%;
+  /*closes skills div*/
+  /*closes education div*/
+}
+.skillsEducation .skills {
+  width: 45%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  border: 1 px solid black;
+}
+.skillsEducation .skills h2 {
+  font-size: 2rem;
+  color: dimgrey;
+}
+.skillsEducation .skills ul {
+  padding-top: 5%;
+}
+.skillsEducation .education {
+  width: 45%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  border: 1px solid black;
+  /*closes h2*/
+}
+.skillsEducation .education h2 {
+  font-size: 2rem;
+  color: dimgrey;
+  margin-bottom: 5%;
+}
+/*closes skillsEducation section*/
+/*styling previous employment section*/
+.previousEmployment {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+  border: 1px solid black;
+  /*close work div*/
+}
+.previousEmployment .work {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /*closes h2*/
+  /*closes employerInfo div*/
+}
+.previousEmployment .work h2 {
+  font-size: 2rem;
+  color: dimgrey;
+  display: flex;
+  justify-content: center;
+}
+.previousEmployment .work .employerInfo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+}
+/*closes previousEmployment section*/
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  /*closes refernces h2*/
+  /*closes myContact Info div*/
+}
+.contactInfo .references {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  padding-bottom: 5%;
+}
+.contactInfo .referencesHeader {
+  font-size: 2rem;
+  color: dimgrey;
+  display: flex;
+  justify-content: center;
+}
+.contactInfo .myContactInfo {
+  border: 1px solid black;
+  /*closes contact h2*/
+}
+.contactInfo .myContactInfo .contact {
+  font-size: 2rem;
+  color: dimgrey;
+}
+/*closes contactInfo section*/
