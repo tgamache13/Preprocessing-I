@@ -57,3 +57,185 @@ html, body {
     height: 100%;
 }
 
+/*variables*/
+@font-color: dimgrey;
+@med-size-font: 2rem;
+
+/*mixins*/
+.font-varela(){
+	font-family: 'Varela Round', sans-serif;
+} 
+.flex-mixin(){
+	display: flex;
+	justify-content: space-between;
+}
+
+/*this helps me figure out the boudaries*/
+*{
+	// border: 1px solid grey !important;
+}
+
+/*styling header*/
+header{
+	.flex-mixin();
+	color: @font-color;
+	background: silver;
+	padding: 2.5%;
+	font-size: 16px;
+
+	@media screen and (max-width: 500px){
+		height: 45%;
+		font-size: 1rem;
+		
+	}
+	.intro{
+		width: 45%;
+		display: flex;
+		flex-direction: column;
+		
+		
+		h1{
+			font-size: 4rem;
+			height: 30%;
+			@media screen and (max-width: 500px){
+				font-size: 2rem;
+			}/*close media query*/
+		}/*closes h1*/
+		h2{
+			font-size: 3rem;
+			height: 30%;
+			@media screen and (max-width: 500px){
+				font-size: 1rem;
+			}/*closes media query*/
+		}/*closes h2*/
+		p{
+			height: 30%;
+			@media screen and (max-width: 500px){
+				font-size: .8rem;
+			}
+		}/*closes p */
+	}/*close intro div*/
+
+	nav{
+		width: 30%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+
+		@media screen and (max-width: 500px){
+			flex-direction: column;
+			align-items: space-around;
+			width: 15%;
+		}/*closes media query*/
+		a{
+			height: 10%;
+			text-align: center;
+			padding-top: 1.5%;
+			width: 50%;
+			border-radius: 20px;
+			border: 1px solid #2F4F4F;
+			color: #2F4F4F;
+			text-decoration: none;
+			@media screen and (max-width: 500px){
+				width: 90%;
+			}
+		}
+	}/*closes nav*/
+	.myPhoto{
+		padding: .75%;
+		width: 20%;
+		@media screen and (max-width: 500px){
+			width: 40%;
+		}/*close media query*/
+	}/*closes myPhoto img*/
+	
+}/*close header*/
+
+
+/*styling skillsEducation section*/
+.skillsEducation{
+	.flex-mixin();
+	border-top: 1px solid black;
+	height: 30%;
+	.skills{
+		width: 45%;
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+		border: 1 px solid black;
+		h2{
+			font-size: @med-size-font;
+			color: @font-color;
+		}
+		ul{
+			padding-top: 5%;
+		}
+	}/*closes skills div*/
+	.education{
+		width:45%;
+		padding-left: 2.5%;
+		padding-right:2.5%;
+		border: 1px solid black;
+		h2{
+			font-size: @med-size-font;
+			color: @font-color;
+			margin-bottom: 5%;
+		}/*closes h2*/
+	}/*closes education div*/
+
+}/*closes skillsEducation section*/
+
+/*styling previous employment section*/
+.previousEmployment{
+	
+	.flex-mixin();
+	width: 100%;
+	padding-left: 1.5%;
+	padding-right: 1.5%;
+	border: 1px solid black;
+	.work{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		
+		h2{
+			font-size: @med-size-font;
+			color: @font-color;
+			display: flex;
+			justify-content: center;
+		}/*closes h2*/
+		.employerInfo{
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			font-size: 1.3rem;
+		}/*closes employerInfo div*/
+	}/*close work div*/	
+}/*closes previousEmployment section*/
+.contactInfo{
+	display: flex;
+	flex-direction: column;
+	.references{
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		font-size: 1.3rem;	
+		padding-bottom: 5%;
+	}
+
+	.referencesHeader{
+		font-size: @med-size-font;
+			color: @font-color;
+			display: flex;
+			justify-content: center;
+	}/*closes refernces h2*/
+	.myContactInfo{
+		border: 1px solid black;
+		.contact{
+			font-size: @med-size-font;
+			color: @font-color;
+		}/*closes contact h2*/
+	}/*closes myContact Info div*/
+	
+
+}/*closes contactInfo section*/
